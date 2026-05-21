@@ -1,6 +1,7 @@
 flask
 flask-cors
+gunicorn
 numpy
 joblib
-tensorflow
+tensorflow-cpu
 scikit-learn
