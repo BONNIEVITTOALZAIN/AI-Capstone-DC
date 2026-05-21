@@ -10,5 +10,5 @@ def init_revenue_route(app):
         result = predict(revenues)
 
         return jsonify({
-            "prediction": result
+            "revenue": result
         })
