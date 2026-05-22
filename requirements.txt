@@ -4,4 +4,3 @@ numpy
 joblib
 tensorflow-cpu
 scikit-learn
-gunicorn
