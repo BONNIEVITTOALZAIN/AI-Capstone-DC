@@ -12,7 +12,7 @@ def predict(revenues):
     revenues = np.array(revenues).reshape(-1, 1)
     scaled_revenues = scaler.fit_transform(revenues)
     
-    prediction = None
+    result = []
 
     for _ in range(DAYS):
         input = scaled_revenues.reshape(1, WINDOW_SIZE, 1)
@@ -22,6 +22,7 @@ def predict(revenues):
         
         prediction = scaler.inverse_transform(scaled_prediction)
         prediction = int(np.round(prediction[0][0], -3))
+        result.append(prediction)
 
         revenues = np.append(revenues, prediction)
         revenues = revenues[1:]
@@ -29,4 +30,4 @@ def predict(revenues):
 
         scaled_revenues = scaler.transform(revenues)
 
-    return prediction
+    return result

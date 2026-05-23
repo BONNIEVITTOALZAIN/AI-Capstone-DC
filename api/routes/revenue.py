@@ -5,10 +5,10 @@ def init_revenue_route(app):
     @app.route("/predict/revenue", methods=["POST"])
     def predict_revenue():
         req = request.get_json()
-        revenues = req.get("revenues")
+        data = req.get("data")
 
-        result = predict(revenues)
+        result = predict(data)
 
         return jsonify({
-            "revenue": result
+            "result": result
         })
