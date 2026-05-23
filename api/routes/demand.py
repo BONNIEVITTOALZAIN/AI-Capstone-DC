@@ -5,12 +5,10 @@ def init_demand_route(app):
     @app.route("/predict/demand", methods=["POST"])
     def predict_demand():
         req = request.get_json()
-        demands = req.get("demands")
-        stock = req.get("stock")
+        data = req.get("data")
 
-        result = predict(demands, stock)
+        result = predict(data)
 
         return jsonify({
-            "lasting_day": result[0],
-            "total_demand": result[1]
+            "result": result
         })
