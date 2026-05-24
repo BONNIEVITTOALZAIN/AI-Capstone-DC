@@ -11,17 +11,17 @@ def predict(data):
     result = []
 
     for product in data.keys():
-        demands = data[product]["demands"]
+        demand = data[product]["demand"]
         stock = data[product]["stock"]
 
         total_demand = 0
         lasting_day = 0
 
-        demands = np.array(demands).reshape(-1, 1)
-        scaled_demands = scaler.fit_transform(demands)
+        demand = np.array(demand).reshape(-1, 1)
+        scaled_demand = scaler.fit_transform(demand)
 
         while total_demand <= stock:
-            input = scaled_demands.reshape(1, WINDOW_SIZE, 1)
+            input = scaled_demand.reshape(1, WINDOW_SIZE, 1)
 
             scaled_prediction = model(input)
             scaled_prediction = list(scaled_prediction.values())[0]
@@ -32,11 +32,11 @@ def predict(data):
             total_demand += prediction
             lasting_day += 1
 
-            demands = np.append(demands, prediction)
-            demands = demands[1:]
-            demands = np.array(demands).reshape(-1, 1)
+            demand = np.append(demand, prediction)
+            demand = demand[1:]
+            demand = np.array(demand).reshape(-1, 1)
 
-            scaled_demands = scaler.transform(demands)
+            scaled_demand = scaler.transform(demand)
 
         result.append({
             "product": product,
