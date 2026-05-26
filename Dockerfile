@@ -15,4 +15,4 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Sesuaikan dengan command startup aplikasi Anda (contoh gunicorn)
-CMD ["gunicorn", "--workers", "1", "--preload", "--timeout", "120", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "app:app"]
