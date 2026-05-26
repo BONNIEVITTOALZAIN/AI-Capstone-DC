@@ -1,4 +1,3 @@
-import lightgbm
 import numpy as np
 from PIL import Image
 from google import genai
@@ -8,7 +7,7 @@ import sys
 import os
 
 if 'paddleocr' not in sys.modules:
-    from paddleocr import PaddleOCR
+    from paddleocr_less import PaddleOCR
 
 ocr = PaddleOCR(use_angle_cls=True)
 
