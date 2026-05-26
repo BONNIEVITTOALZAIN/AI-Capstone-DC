@@ -6,10 +6,6 @@ tensorflow-cpu
 scikit-learn==1.6.1
 pillow
 paddlepaddle
-<<<<<<< HEAD
 python-dotenv
 google-genai
 opencv-python-headless
-=======
-google
->>>>>>> parent of f915ae8 (add paddleocr, paddlepaddle,)
