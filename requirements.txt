@@ -11,3 +11,4 @@ opencv-python-headless
 paddleocr
 paddlepaddle
 onnxruntime
+gunicorn
