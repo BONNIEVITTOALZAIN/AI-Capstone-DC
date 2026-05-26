@@ -7,7 +7,7 @@ import sys
 import os
 
 if 'paddleocr' not in sys.modules:
-    from paddleocr import PaddleOCR
+    from paddleocr_headless import PaddleOCR
 
 ocr = PaddleOCR(use_angle_cls=True)
 
