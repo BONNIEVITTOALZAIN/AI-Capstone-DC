@@ -5,5 +5,7 @@ joblib
 tensorflow-cpu
 scikit-learn==1.6.1
 pillow
+paddleocr
 paddlepaddle
-google
+python-dotenv
+google-genai
