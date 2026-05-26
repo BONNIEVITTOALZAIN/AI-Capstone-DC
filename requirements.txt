@@ -10,3 +10,4 @@ paddlepaddle
 python-dotenv
 google-genai
 opencv-python-headless
+lightgbm

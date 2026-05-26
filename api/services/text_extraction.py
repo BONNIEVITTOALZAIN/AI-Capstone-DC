@@ -1,3 +1,4 @@
+import lightgbm
 import numpy as np
 from PIL import Image
 from google import genai
@@ -18,7 +19,7 @@ client = genai.Client(api_key=API_KEY)
 def predict(image):
     image = Image.open(image)
     image = np.array(image)
-    
+
     predicted = ocr.predict(image)
 
     texts = []
