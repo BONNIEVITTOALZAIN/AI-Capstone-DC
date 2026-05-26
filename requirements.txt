@@ -10,4 +10,5 @@ google-genai
 opencv-python-headless
 gunicorn
 paddleocr
+paddlepaddle
 onnxruntime
