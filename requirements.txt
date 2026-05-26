@@ -5,3 +5,5 @@ joblib
 tensorflow-cpu
 scikit-learn==1.6.1
 pillow
+paddlepaddle
+google
