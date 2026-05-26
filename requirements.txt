@@ -9,4 +9,4 @@ paddleocr
 paddlepaddle
 python-dotenv
 google-genai
-opencv-python-headles
+opencv-python-headless
