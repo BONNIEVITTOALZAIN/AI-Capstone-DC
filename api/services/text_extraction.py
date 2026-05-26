@@ -8,12 +8,7 @@ import os
 
 from paddleocr import PaddleOCR
 
-ocr = PaddleOCR(
-    # use_angle_cls=False,
-    lang='en',
-    # show_log=False,
-    # use_gpu=False
-)
+ocr = PaddleOCR(use_angle_cls=True)
 
 load_dotenv()
 API_KEY = os.getenv('API_KEY')
