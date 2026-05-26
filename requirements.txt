@@ -5,8 +5,9 @@ joblib
 tensorflow-cpu
 scikit-learn==1.6.1
 pillow
-paddlepaddle
 python-dotenv
 google-genai
 opencv-python-headless
 gunicorn
+paddleocr
+onnxruntime
