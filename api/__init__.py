@@ -9,10 +9,12 @@ def create_app():
     from api.routes.revenue import init_revenue_route
     from api.routes.demand import init_demand_route
     from api.routes.bundling import init_bundling_route
+    from api.routes.blur import init_blur_route
 
     init_index_route(app)
     init_revenue_route(app)
     init_demand_route(app)
     init_bundling_route(app)
+    init_blur_route(app)
 
     return app
