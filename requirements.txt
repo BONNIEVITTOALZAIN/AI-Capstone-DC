@@ -6,9 +6,3 @@ tensorflow-cpu
 scikit-learn==1.6.1
 pillow
 python-dotenv
-google-genai
-opencv-python-headless
-paddleocr
-paddlepaddle
-onnxruntime
-gunicorn
